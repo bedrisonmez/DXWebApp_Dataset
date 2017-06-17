@@ -30,6 +30,40 @@
                 <SortedDescendingCellStyle BackColor="#FCF6C0" />
                 <SortedDescendingHeaderStyle BackColor="#820000" />
             </asp:GridView>
+            <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSource1" EnableTheming="True" KeyFieldName="CustomerID" Theme="Mulberry">
+                <SettingsEditing Mode="PopupEditForm">
+                </SettingsEditing>
+                <Settings ShowFilterRow="True" ShowGroupPanel="True" />
+                <SettingsSearchPanel Visible="True" />
+                <Columns>
+                    <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButtonInHeader="True" VisibleIndex="0">
+                    </dx:GridViewCommandColumn>
+                    <dx:GridViewDataTextColumn FieldName="CustomerID" ReadOnly="True" VisibleIndex="1">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="CompanyName" VisibleIndex="2">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ContactName" VisibleIndex="3">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ContactTitle" VisibleIndex="4">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="Address" VisibleIndex="5">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="City" VisibleIndex="6">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="Region" VisibleIndex="7">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="PostalCode" VisibleIndex="8">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="Country" VisibleIndex="9">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="Phone" VisibleIndex="10">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="Fax" VisibleIndex="11">
+                    </dx:GridViewDataTextColumn>
+                </Columns>
+            </dx:ASPxGridView>
+
+            <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="DXWebApp_Dataset.App_Data.DataSet1TableAdapters.Customers1TableAdapter"></asp:ObjectDataSource>
 
         </div>
 
